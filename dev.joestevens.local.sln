@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev.joestevens.web", "dev.joestevens.web\dev.joestevens.web.csproj", "{232B05EB-C943-4297-9833-D47C2400630B}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "dev.joestevens.TDS.Master", "dev.joestevens.TDS.Master\dev.joestevens.TDS.Master.scproj", "{F3D7500E-DB5B-46F7-9A09-EB15E193D413}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{92CAD3E1-B2D7-4704-B6C7-64553C2DD1B8}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{232B05EB-C943-4297-9833-D47C2400630B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232B05EB-C943-4297-9833-D47C2400630B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232B05EB-C943-4297-9833-D47C2400630B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232B05EB-C943-4297-9833-D47C2400630B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3D7500E-DB5B-46F7-9A09-EB15E193D413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3D7500E-DB5B-46F7-9A09-EB15E193D413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3D7500E-DB5B-46F7-9A09-EB15E193D413}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F3D7500E-DB5B-46F7-9A09-EB15E193D413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3D7500E-DB5B-46F7-9A09-EB15E193D413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3D7500E-DB5B-46F7-9A09-EB15E193D413}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

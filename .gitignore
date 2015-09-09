@@ -187,3 +187,19 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+# Custom
+BuiltFiles_*.txt 
+*.TDS.*/Package_*/ 
+*.TDS.*/QA-*/ 
+*.TDS.*/INT-*/ 
+*.TDS.*/Debug/ 
+*.TDS.*/Release/ 
+*.TDS.*/PROD-*/ 
+*.TDS.*/Sandbox/ 
+*.TDS.*/IconCache/ 
+/website/ 
+*.user 
+**/bin 
+**/obj 
+*.suo
