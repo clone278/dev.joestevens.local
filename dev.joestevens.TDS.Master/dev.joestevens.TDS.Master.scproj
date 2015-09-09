@@ -44,6 +44,55 @@
     <OutputPath>.\bin\Release\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'INT' ">
+    <DebugSymbols>false</DebugSymbols>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <OutputPath>.\bin\INT\</OutputPath>
+    <InstallSitecoreConnector>False</InstallSitecoreConnector>
+    <DisableFileDeployment>False</DisableFileDeployment>
+    <PackageName>dev.joestevens.TDS.Master</PackageName>
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <PackageAuthor>BlackieMagic</PackageAuthor>
+    <PackagePublisher>BlackieMagic</PackagePublisher>
+    <PackageReadme>Dev.JoeStevens.Master.INT</PackageReadme>
+    <PackageVersion>1.0</PackageVersion>
+    <SitecoreAssemblyPath>..\lib\Sitecore</SitecoreAssemblyPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'STGCMS' ">
+    <OutputPath>.\bin\STGCMS\</OutputPath>
+    <InstallSitecoreConnector>False</InstallSitecoreConnector>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <DisableFileDeployment>False</DisableFileDeployment>
+    <PackageName>Dev.JoeStevens.TDS.Master</PackageName>
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <PackageAuthor>BlackieMagic</PackageAuthor>
+    <PackagePublisher>BlackieMagic</PackagePublisher>
+    <PackageReadme>Dev.JoeStevens.Master.STGCMS</PackageReadme>
+    <PackageVersion>1.0</PackageVersion>
+    <SitecoreAssemblyPath>..\lib\Sitecore</SitecoreAssemblyPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'STGCDS' ">
+    <OutputPath>.\bin\STGCDS\</OutputPath>
+    <InstallSitecoreConnector>False</InstallSitecoreConnector>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <DisableFileDeployment>False</DisableFileDeployment>
+    <PackageName>Dev.JoeStevens.TDS.Master</PackageName>
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>True</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <PackageAuthor>BlackieMagic</PackageAuthor>
+    <PackagePublisher>BlackieMagic</PackagePublisher>
+    <PackageReadme>Dev.JoeStevens.Master.STGCDS</PackageReadme>
+    <PackageVersion>1.0</PackageVersion>
+    <SitecoreAssemblyPath>..\lib\Sitecore</SitecoreAssemblyPath>
+  </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">
       <Value>$(AssemblyFileVersion)</Value>
@@ -99,6 +148,45 @@
     <CodeGenTemplate Include="Code Generation Templates\helpers.tt" />
     <CodeGenTemplate Include="Code Generation Templates\inflector.tt" />
     <CodeGenTemplate Include="Code Generation Templates\stringextensions.tt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="HtmlAgilityPack.dll" />
+    <ExcludedAssemblies Include="Sitecore.Client.dll" />
+    <ExcludedAssemblies Include="Sitecore.Kernal.dll" />
+    <ExcludedAssemblies Include="Sitecore.Logging.dll" />
+    <ExcludedAssemblies Include="Sitecore.Mvc.dll" />
+    <ExcludedAssemblies Include="Sitecore.Mvc.ExperienceEditor.dll" />
+    <ExcludedAssemblies Include="Sitecore.Update.dll" />
+    <ExcludedAssemblies Include="Sitecore.Zip.dll" />
+    <ExcludedAssemblies Include="System.Web.Mvc.dll" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'INT' ">
+    <Replacement Include="..\dev.joestevens.Environment\INT\">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'STGCMS' ">
+    <Replacement Include="..\dev.joestevens.Environment\STGCMS\">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'STGCDS' ">
+    <Replacement Include="..\dev.joestevens.Environment\STGCDS\">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Replacement Include="..\dev.joestevens.Environment\Website\">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
 </Project>
